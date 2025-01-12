@@ -14,6 +14,8 @@ React: Frontend framework for building the user interface
 Node.js: JavaScript runtime environment for the backend
 JWT Authentication: For managing sessions and verifying users
 Setup and Installation
+
+
 Prerequisites
 Node.js and npm installed
 MongoDB database setup (local or cloud like MongoDB Atlas)
