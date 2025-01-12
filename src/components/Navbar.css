@@ -1,0 +1,141 @@
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #4CAF50;
+}
+
+/* Search Icon */
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.1);
+    stroke: #4CAF50;
+}
+
+/* Right Navbar Section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Login Button */
+.login-btn, .logout-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover, .logout-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.profile-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 140px;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Mobile Menu */
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .navbar-right {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .navbar-right.open {
+        display: flex;
+    }
+
+    .navbar-right a, .navbar-right button {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}

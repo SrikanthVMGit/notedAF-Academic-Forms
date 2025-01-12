@@ -1,0 +1,185 @@
+/* Overall container for the class details */
+.class-details {
+  padding: 20px;
+  margin: auto;
+  max-width: 1200px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Section for the class header */
+.section1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Style for the class image */
+.class-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #4CAF50; /* Adding a border for visual appeal */
+}
+
+/* Class name styling */
+.class-name {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Class description styling */
+.class-description {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Button styling for adding a post */
+.add-post-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.add-post-btn:hover {
+  background-color: #45a049;
+}
+
+/* Loading state text */
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Grid for displaying posts */
+.post-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Styling for individual post cards */
+.post-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px); /* Three columns */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px); /* Adds a hover effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Post title styling */
+.post-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Post description styling */
+.post-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Popup overlay style */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup content styling */
+.popup-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  animation: popupAnim 0.3s forwards;
+}
+
+/* Popup header styling */
+.popup-content h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Input and textarea styles */
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Button group in popups */
+.popup-buttons button {
+  margin: 8px;
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-buttons button:hover {
+  background-color: #45a049;
+}
+
+/* Error message for OTP input */
+.otp-error {
+  color: #ff4d4d;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Popup animation */
+@keyframes popupAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

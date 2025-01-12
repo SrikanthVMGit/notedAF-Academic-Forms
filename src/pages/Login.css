@@ -1,0 +1,115 @@
+/* Login Page Layout */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7f9;
+  padding: 20px;
+}
+
+/* Login Container */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Headings */
+.login-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #388E3C;
+}
+
+/* Spinner Icon */
+.spinner {
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sign Up Link */
+.signup-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+      padding: 30px 20px;
+  }
+
+  .login-container h2 {
+      font-size: 1.6rem;
+  }
+}
