@@ -1,7 +1,10 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import React, { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import axios from 'axios'; // Import Axios
 import './ClassesDetails.css';
+
 
 const ClassesDetails = () => {
   const { classid } = useParams();
@@ -11,11 +14,13 @@ const ClassesDetails = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [postTitle, setPostTitle] = useState('');
   const [postDescription, setPostDescription] = useState('');
-  
   const [showJoinPopup, setShowJoinPopup] = useState(false);
   const [otp, setOtp] = useState('');
   const [showOtpPopup, setShowOtpPopup] = useState(false);
   const [otpError, setOtpError] = useState('');
+  const [textToSummarize, setTextToSummarize] = useState(''); // State for input text
+  const [summary, setSummary] = useState(''); // State for summarized text
+  const [summarizing, setSummarizing] = useState(false); // State for loading
 
   const fetchClassDetails = useCallback(async () => {
     try {
@@ -35,7 +40,7 @@ const ClassesDetails = () => {
     } finally {
       setLoading(false);
     }
-  }, [classid]); // Only re-run if classid changes
+  }, [classid]);
 
   const fetchUserData = async () => {
     try {
@@ -58,7 +63,7 @@ const ClassesDetails = () => {
   useEffect(() => {
     fetchClassDetails();
     fetchUserData();
-  }, [classid, fetchClassDetails]); // Include fetchClassDetails in dependency array
+  }, [classid, fetchClassDetails]);
 
   const handleAddPost = () => setShowPopup(true);
 
@@ -148,6 +153,41 @@ const ClassesDetails = () => {
     setOtpError('');
   };
 
+  const handleSummarize = async () => {
+    if (!textToSummarize) {
+      toast.error('Please enter text to summarize');
+      return;
+    }
+  
+    setSummarizing(true);
+    try {
+      const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  
+      const prompt = `Summarize the following text:\n\n${textToSummarize}`;
+      const result = await model.generateContent(prompt);
+  
+      if (result && result.response && result.response.text) {
+        setSummary(result.response.text());
+      } else {
+        throw new Error('Failed to summarize text');
+      }
+    } catch (error) {
+      if (error.response) {
+        toast.error(`Error: ${error.response.status} ${error.response.statusText}`);
+        console.error('Response data:', error.response.data);
+      } else if (error.request) {
+        toast.error('No response received from the server');
+        console.error('Request data:', error.request);
+      } else {
+        toast.error(`Error: ${error.message}`);
+        console.error('Error message:', error.message);
+      }
+    } finally {
+      setSummarizing(false);
+    }
+  };
+
   if (loading) {
     return <div className="loading">Loading...</div>;
   }
@@ -158,7 +198,6 @@ const ClassesDetails = () => {
   return (
     <div className="class-details">
       <div className="section1">
-        {/*<img src="https://via.placeholder.com/150" alt="Classroom" className="class-image" />*/}
         <h1 className="class-name">{classroom?.name}</h1>
         <p className="class-description">{classroom?.description}</p>
 
@@ -239,6 +278,25 @@ const ClassesDetails = () => {
           </div>
         </div>
       )}
+
+      {/* Summarization Feature */}
+      <div className="summarization-section">
+        <h3>Summarize Text</h3>
+        <textarea
+          placeholder="Paste text here..."
+          value={textToSummarize}
+          onChange={(e) => setTextToSummarize(e.target.value)}
+        />
+        <button onClick={handleSummarize} disabled={summarizing}>
+          {summarizing ? 'Summarizing...' : 'Summarize'}
+        </button>
+        {summary && (
+          <div className="summary-output">
+            <h4>Summary:</h4>
+            <p>{summary}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

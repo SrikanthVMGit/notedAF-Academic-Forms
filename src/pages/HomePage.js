@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Slider from 'react-slick';
 import './HomePage.css';
+import image1 from '../assets/images/1.png';
+import image2 from '../assets/images/2.png';
+import image3 from '../assets/images/3.png';
+
 
 const Homepage = () => {
     const [user, setUser] = useState(null);
@@ -40,19 +44,7 @@ const Homepage = () => {
 
     return (
         <div className="homepage">
-            {/* Image Slider */}
-            <Slider {...sliderSettings} className="image-slider">
-                <div>
-                    <img src="path/to/your/image1.jpg" alt="Slide 1" />
-                </div>
-                <div>
-                    <img src="path/to/your/image2.jpg" alt="Slide 2" />
-                </div>
-                <div>
-                    <img src="path/to/your/image3.jpg" alt="Slide 3" />
-                </div>
-                {/* Add more slides as needed */}
-            </Slider>
+            
 
             {/* Hero Section */}
             <section className="hero-section">
@@ -70,6 +62,21 @@ const Homepage = () => {
                 </button>
             </section>
 
+            {/* Image Slider */}
+            <Slider {...sliderSettings} className="image-slider">
+            <div>
+          <img src={image1} alt="Slide 1" />
+        </div>
+        <div>
+          <img src={image2} alt="Slide 2" />
+        </div>
+        <div>
+          <img src={image3} alt="Slide 3" />
+        </div>
+                {/* Add more slides as needed */}
+            </Slider>
+
+            
             {/* Features Section */}
             <section className="features-section">
                 <h2>Experience the best features of the Forms</h2>
