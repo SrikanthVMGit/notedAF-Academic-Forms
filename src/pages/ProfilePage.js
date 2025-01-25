@@ -45,7 +45,9 @@ const ProfilePage = () => {
     useEffect(() => {
         if (user) {
             fetchClassrooms();
-            fetchJoinedClassrooms();
+            if (user.role !== 'teacher') {
+                fetchJoinedClassrooms();
+            }
         }
     }, [user]);
 
@@ -201,25 +203,27 @@ const ProfilePage = () => {
                         </div>
                     )}
 
-                    <div className="classroom-list">
-                        <h3>Classrooms Joined by Me</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {classroomsJoinedByMe.map((classroom) => (
-                                    <tr key={classroom._id} onClick={() => handleRowClick(classroom._id)}>
-                                        <td>{classroom.name}</td>
-                                        <td>{classroom.description}</td>
+                    {user.role !== 'teacher' && (
+                        <div className="classroom-list">
+                            <h3>Classrooms Joined by Me</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    {classroomsJoinedByMe.map((classroom) => (
+                                        <tr key={classroom._id} onClick={() => handleRowClick(classroom._id)}>
+                                            <td>{classroom.name}</td>
+                                            <td>{classroom.description}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
                 </>
             ) : (
                 <p>No user data found.</p>

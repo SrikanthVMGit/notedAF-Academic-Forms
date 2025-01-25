@@ -1,16 +1,19 @@
+
+
+
 /* Login Page Layout */
 .login-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f7f9;
+  background-color: #023e8a;
   padding: 20px;
 }
 
 /* Login Container */
 .login-container {
-  background-color: #ffffff;
+  background-color: #caf0f8;
   padding: 40px 50px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -22,12 +25,12 @@
 /* Headings */
 .login-container h2 {
   font-size: 2rem;
-  color: #333;
+  color: #03045e;
   margin-bottom: 10px;
 }
 
 .login-container p {
-  color: #777;
+  color: #0077b6;
   font-size: 0.9rem;
   margin-bottom: 30px;
 }
@@ -40,7 +43,7 @@
 
 .input-group label {
   font-size: 0.9rem;
-  color: #555;
+  color: #050060;
   display: block;
   margin-bottom: 5px;
 }
@@ -63,7 +66,7 @@
 .login-btn {
   width: 100%;
   padding: 12px 0;
-  background-color: #4CAF50;
+  background-color: #003f88;
   color: white;
   border: none;
   border-radius: 6px;
@@ -94,7 +97,7 @@
 }
 
 .signup-link a {
-  color: #4CAF50;
+  color: #023e8a;
   text-decoration: none;
   font-weight: bold;
 }

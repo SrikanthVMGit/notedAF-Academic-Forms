@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Slider from 'react-slick';
 import './HomePage.css';
 
 const Homepage = () => {
@@ -26,8 +27,33 @@ const Homepage = () => {
         fetchUser();
     }, []);
 
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+    };
+
     return (
         <div className="homepage">
+            {/* Image Slider */}
+            <Slider {...sliderSettings} className="image-slider">
+                <div>
+                    <img src="path/to/your/image1.jpg" alt="Slide 1" />
+                </div>
+                <div>
+                    <img src="path/to/your/image2.jpg" alt="Slide 2" />
+                </div>
+                <div>
+                    <img src="path/to/your/image3.jpg" alt="Slide 3" />
+                </div>
+                {/* Add more slides as needed */}
+            </Slider>
+
             {/* Hero Section */}
             <section className="hero-section">
                 <h1>Welcome to Noted AF <br></br>(academic forms)</h1>
@@ -40,13 +66,13 @@ const Homepage = () => {
                     className="explore-btn"
                     onClick={() => navigate(user ? '/profile' : '/signup')}
                 >
-                    {user ? 'Go to Profile' : 'Get Started'}
+                    {user ? (user.role === 'teacher' ? 'Your Classes' : 'Learning Dashboard') : 'Get Started'}
                 </button>
             </section>
 
             {/* Features Section */}
             <section className="features-section">
-                <h2>Why Choose EduHub?</h2>
+                <h2>Experience the best features of the Forms</h2>
                 <div className="features-grid">
                     <div className="feature-card">
                         <img src="https://img.icons8.com/ios/100/000000/teacher.png" alt="Create Classrooms" />

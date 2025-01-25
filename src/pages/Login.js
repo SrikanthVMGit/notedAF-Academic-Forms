@@ -44,7 +44,7 @@ const Login = () => {
       if (response.ok) {
         toast.success('Logged in successfully');
         login(data.data);
-        navigate('/');
+        navigate('/home'); // Redirect to homepage after login
       } else {
         toast.error(data.message || 'Invalid email or password');
       }
@@ -58,7 +58,7 @@ const Login = () => {
   return (
     <div className="login-page">
       <div className="login-container">
-        <h2>Welcome Back 👋</h2>
+        <h2>Noted Academic Forms</h2>
         <p>Please enter your details to continue.</p>
 
         <form onSubmit={handleSubmit} className="login-form">

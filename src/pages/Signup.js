@@ -83,58 +83,80 @@ const Signup = () => {
 
     return (
         <div className="signup-page">
-            <h1>Signup</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-                <div className="email-otp-container">
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <button
-                        type="button"
-                        onClick={handleSendOtp}
-                        className="send-otp-btn"
-                        disabled={otpLoading}
-                    >
-                        {otpLoading ? 'Sending...' : 'Send OTP'}
-                    </button>
+            <div className="signup-container">
+                <h2>Noted Academic Forms</h2>
+
+                <form onSubmit={handleSubmit} className='signup-form'>
+                    <div className="input-group">
+                        <label htmlFor="name">Name</label>
+                        <input
+                            type="text"
+                            placeholder="Enter your name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
+
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+<div className="send-otp-btn-container">
+
+                        <button
+                            type="button"
+                            onClick={handleSendOtp}
+                            className="send-otp-btn"
+                            disabled={otpLoading}
+                        >
+                            {otpLoading ? 'Sending...' : 'Send OTP'}
+                        </button>
+                        </div>
+                        <div className="input-group">
+
+                            <div className="input-group">
+                                <label htmlFor="otp">OTP</label>
+                                <input
+                                    type="text"
+                                    id="otp"
+                                    placeholder="Enter OTP"
+                                    value={otp}
+                                    onChange={(e) => setOtp(e.target.value)}
+                                    required
+                                />
+
+                                <label htmlFor="password">Password</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                />
+
+                                <label htmlFor="role">Role</label>
+                                <select id="role" value={role} onChange={(e) => setRole(e.target.value)}>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="student">Student</option>
+                                </select>
+                            </div>
+                            <button type="submit" disabled={loading}>
+                                {loading ? 'Registering...' : 'Signup'}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div className="login-link">
+                    <p>
+                        Already have an account? <Link to="/login">Login here</Link>
+                    </p>
                 </div>
-                <input
-                    type="text"
-                    placeholder="Enter OTP"
-                    value={otp}
-                    onChange={(e) => setOtp(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <select value={role} onChange={(e) => setRole(e.target.value)}>
-                    <option value="teacher">Teacher</option>
-                    <option value="student">Student</option>
-                </select>
-                <button type="submit" disabled={loading}>
-                    {loading ? 'Registering...' : 'Signup'}
-                </button>
-            </form>
-            <div className="login-link">
-                <p>
-                    Already have an account? <Link to="/login">Login here</Link>
-                </p>
             </div>
         </div>
     );
