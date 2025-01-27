@@ -22,7 +22,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-      <Navbar showSearch={false}  showLogout={false}/> {/* Pass prop to hide search bar */}
+      <Navbar showSearch={false} showLogout={false} /> {/* Pass prop to hide search bar */}
 
 
       <section className="features">
@@ -34,11 +34,34 @@ const LandingPage = () => {
       </section>
 
       <header className="landing-header">
-        <h1>Welcome to Noted AF</h1>
-        <p>Your academic platform for managing classrooms and posts.</p>
-        <div className="landing-buttons">
-          <Link to="/login" className="landing-btn">Login</Link>
+        <h1>Our Solutions</h1>
+        <div className="features-container1">
+          <div className="features-panels">
+            <p>Seamless AI integration</p>
+          </div>
+          <div className="features-panels">
+            <p>Secure OTP authentication</p>
+          </div>
+          <div className="features-panels">
+            <p>Customized classroom environments</p>
+          </div>
+          </div>
+
+
+
+          <div className="features-container2">
+          <div className="features-panels">
+            <p>AI-powered note summarization</p>
+          </div>
+          <div className="features-panels">
+            <p>User-friendly interface</p>
+          </div>
+          <div className="features-panels">
+            <p>Robust password protection</p>
+          </div>
         </div>
+
+        
       </header>
 
 
@@ -55,6 +78,9 @@ const LandingPage = () => {
         </div>
         {/* Add more slides as needed */}
       </Slider>
+      <div className="landing-buttons">
+          <Link to="/login" className="landing-btn">Login</Link>
+        </div>
 
       <section className="landing-info">
         <h2>About Noted AF</h2>

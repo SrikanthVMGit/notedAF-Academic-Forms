@@ -1,0 +1,4 @@
+/* Hide horizontal scroll bar */
+.container {
+    overflow-x: hidden;
+}
