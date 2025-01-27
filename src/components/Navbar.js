@@ -5,7 +5,7 @@ import './Navbar.css';
 import SearchPopup from './SearchPopup';
 import { IoSearchCircleOutline } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ showSearch = true, showLogout = true }) => {
     const { auth, logout } = useAuth();
     const [showPopup, setShowPopup] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,6 +27,10 @@ const Navbar = () => {
         }
     };
 
+    const handleLogoutClick = () => {
+        logout();
+    };
+
     const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
 
     return (
@@ -39,7 +43,12 @@ const Navbar = () => {
                     <Link to="#" className="logo" onClick={handleLogoClick}>Noted AF</Link>
                 )}
 
-                {!isAuthPage && (
+                
+            </div>
+
+            {/* Right Section */}
+            <div className={`navbar-right ${mobileMenuOpen ? 'open' : ''}`}>
+            {!isAuthPage && showSearch && (
                     <>
                         <span className="search-text">Search Classes:</span>
                         <IoSearchCircleOutline
@@ -51,14 +60,10 @@ const Navbar = () => {
                         {showPopup && <SearchPopup onClose={togglePopup} />}
                     </>
                 )}
-            </div>
-
-            {/* Right Section */}
-            <div className={`navbar-right ${mobileMenuOpen ? 'open' : ''}`}>
                 {auth.user && !isAuthPage ? (
                     <>
                         <Link to="/profile" className="profile-btn">Profile</Link>
-                        <button onClick={logout} className="logout-btn">Logout</button>
+                        {showLogout && <button onClick={handleLogoutClick} className="logout-btn">Logout</button>}
                     </>
                 ) : (
                     !isAuthPage && <Link to="/login" className="login-btn">Login</Link>

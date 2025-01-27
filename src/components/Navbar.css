@@ -4,8 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background-color: #e0e0e0;
-    border-bottom: 5px solid #000000;
+    background-color: #FDFFFC;
+    border-bottom: 5px solid #0D3B66;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -18,6 +18,7 @@
     font-weight: bold;
     color: #333;
     text-decoration: none;
+    margin-right: auto; /* Align NotedAF text to the right */
 }
 
 .logo:hover {
@@ -26,46 +27,48 @@
 
 /* Search Icon */
 .search-icon {
-    
-    width: 32px;
-    height: 32px;
-    margin-left:10px;
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
 
 .search-icon:hover {
     transform: scale(1.1);
     stroke: #4CAF50;
 }
-.navbar-left{
+
+.navbar-left {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-right: auto; /* Ensure left section is aligned to the left */
 }
+
 /* Right Navbar Section */
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 10px; /* Add some space between buttons */
+    margin-left: auto; /* Align buttons to the right */
 }
 
 .search-text {
-    padding-left: 850px;
     margin-right: 0px;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 500;
     color: #313131;
 }
 
 /* Login Button, Logout Button, and Profile Button */
 .login-btn, .logout-btn, .profile-btn {
     font-size: 16px !important;
-    background-color: #050060;
+    background-color: #05639E;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
     text-decoration: none;
     font-weight: 600 !important;
     cursor: pointer;
@@ -73,7 +76,7 @@
 }
 
 .login-btn:hover, .logout-btn:hover, .profile-btn:hover {
-    background-color: #388E3C;
+    background-color: #2C6E49;
 }
 
 /* Profile Dropdown */

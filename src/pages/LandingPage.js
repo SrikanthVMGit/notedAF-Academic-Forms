@@ -7,6 +7,8 @@ import './LandingPage.css';
 import image1 from '../assets/images/1.png';
 import image2 from '../assets/images/2.png';
 import image3 from '../assets/images/3.png';
+import Navbar from '../components/Navbar'; // Import the existing NavBar component
+
 const LandingPage = () => {
   const sliderSettings = {
     dots: true,
@@ -20,13 +22,28 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+      <Navbar showSearch={false}  showLogout={false}/> {/* Pass prop to hide search bar */}
+
+
+      <section className="features">
+        <h1>Transform academics<br />  with AI-powered<br />  Noted AF.</h1>
+
+        <p>Discover the ultimate AI-powered platform for creating and managing academic forms. <br />
+          Explore our versatile solutions and services designed to enhance your academic experience.</p>
+        <Link to="/signup" className="landing-btn">Sign Up for free</Link>
+      </section>
+
       <header className="landing-header">
         <h1>Welcome to Noted AF</h1>
         <p>Your academic platform for managing classrooms and posts.</p>
-       
+        <div className="landing-buttons">
+          <Link to="/login" className="landing-btn">Login</Link>
+        </div>
       </header>
-       {/* Image Slider */}
-       <Slider {...sliderSettings} className="image-slider">
+
+
+      {/* Image Slider */}
+      <Slider {...sliderSettings} className="image-slider">
         <div>
           <img src={image1} alt="Slide 1" />
         </div>
@@ -39,16 +56,21 @@ const LandingPage = () => {
         {/* Add more slides as needed */}
       </Slider>
 
-      <div className="landing-buttons">
-          <Link to="/login" className="landing-btn">Login</Link>
-          <Link to="/signup" className="landing-btn">Sign Up</Link>
-        </div>
-        
       <section className="landing-info">
         <h2>About Noted AF</h2>
         <p>Noted AF is an academic platform built using the MERN stack (MongoDB, Express.js, React, Node.js) to allow teachers and students to create, view, and manage academic posts. It includes the functionality for students to join classrooms through email OTPs sent by teachers. The platform enables interaction and sharing of notes in the form of posts.</p>
       </section>
-     
+
+      <section className="landing-features">
+        <h2>Features</h2>
+        <ul>
+          <li>Create and manage academic posts</li>
+          <li>Join classrooms via email OTPs</li>
+          <li>Share and interact with notes</li>
+          <li>Real-time notifications</li>
+          <li>Secure and reliable platform</li>
+        </ul>
+      </section>
     </div>
   );
 };
