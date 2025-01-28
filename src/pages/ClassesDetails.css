@@ -197,6 +197,10 @@
   color: #333;
 }
 
+.summarization-section p{
+  margin-bottom: 12px;
+}
+
 .summarization-section textarea {
   width: 100%;
   height: 100px;

@@ -280,7 +280,8 @@ const ClassesDetails = () => {
 
       {/* Summarization Feature */}
       <div className="summarization-section">
-        <h3>Summarize Text</h3>
+        <h3>Summarize Your Notes here...</h3>
+        <p>Copy paste your notes</p>
         <textarea
           placeholder="Paste text here..."
           value={textToSummarize}
