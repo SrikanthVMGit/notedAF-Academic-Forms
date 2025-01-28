@@ -24,11 +24,11 @@ const mailer = async (recieveremail, code) => {
         }
     })
     let info = await transporter.sendMail({
-        from: "Team MastersGang",
+        from: "Team NotedAF",
         to: recieveremail,
-        subject: "OTP for MastersGang",
-        text: "Your OTP is " + code,
-        html: "<b>Your OTP is " + code + "</b>",
+        subject: "OTP for NoteAF",
+        text: "Your OTP to Signup for NotedAF: " + code,
+        html: "<b>Your OTP to Signup for NotedAF: " + code + "</b>",
     })
 
     console.log("Message sent: %s", info.messageId);
