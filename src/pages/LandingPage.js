@@ -78,9 +78,13 @@ const LandingPage = () => {
         </div>
         {/* Add more slides as needed */}
       </Slider>
-      <div className="landing-buttons">
+      <section className="useralready">
+        <h1>Already a user?</h1>
+        <div className="landing-buttons">
           <Link to="/login" className="landing-btn">Login</Link>
         </div>
+      </section>
+   
 
       <section className="landing-info">
         <h2>About Noted AF</h2>
