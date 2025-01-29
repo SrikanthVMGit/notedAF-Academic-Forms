@@ -79,6 +79,8 @@ const LandingPage = () => {
         {/* Add more slides as needed */}
       </Slider>
       <section className="useralready">
+        <h2>About Noted AF</h2>
+        <p>Noted AF is an academic platform built using the MERN stack <br/> (MongoDB, Express.js, React, Node.js) to allow teachers and students to create, view, and manage academic posts.  <br/>It includes the functionality for students to join classrooms through email OTPs sent by teachers. <br/> The platform enables interaction and sharing of notes in the form of posts.</p>
         <h1>Already a user?</h1>
         <div className="landing-buttons">
           <Link to="/login" className="landing-btn">Login</Link>
@@ -86,10 +88,7 @@ const LandingPage = () => {
       </section>
    
 
-      <section className="landing-info">
-        <h2>About Noted AF</h2>
-        <p>Noted AF is an academic platform built using the MERN stack (MongoDB, Express.js, React, Node.js) to allow teachers and students to create, view, and manage academic posts. It includes the functionality for students to join classrooms through email OTPs sent by teachers. The platform enables interaction and sharing of notes in the form of posts.</p>
-      </section>
+      
 
       <section className="landing-features">
         <h2>Features</h2>

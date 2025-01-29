@@ -61,17 +61,6 @@
    
   }
 
-  .useralready{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px 150px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #ffffff;
-    background: #011627;
-  }
 
   .landing-header {
     height: 780px;
@@ -126,18 +115,41 @@
     color: #fff;
   }
   
-  .landing-info {
-    padding: 20px;
-    background-color: #f4f7f9;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  .useralready{
+    height: 780px;
+    background: #011627;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 150px;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .useralready h2 {
+    font-family: "DM Serif Display", sans-serif;
+    font-size: 72px;
+    color: #F1D302;
+    line-height: 1.05;
+    margin-bottom: 20px; 
+  }
+  .useralready h1 {
+    font-family: "DM Serif Display", sans-serif;
+    font-size: 36px;
+    color: #F1D302;
+    line-height: 1.05;
+    margin-bottom: 20px; 
   }
   
-  .landing-info h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .landing-info p {
+  .useralready p{
+    margin-top:50px;
+    display: flex;
+    justify-content: flex-start;
+    color: #ffffff;
     font-size: 1.2rem;
     line-height: 1.6;
   }
