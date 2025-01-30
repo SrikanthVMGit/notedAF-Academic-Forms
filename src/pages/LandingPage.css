@@ -17,6 +17,16 @@
     margin-top:35px;
   }
 
+
+  .landing-copyright{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 70%;
+  } 
+  .landing-copyright h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
   .features-container2 {
     margin-left: 40px;
 

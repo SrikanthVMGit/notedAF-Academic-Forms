@@ -90,17 +90,16 @@ const LandingPage = () => {
 
       
 
-      <section className="landing-features">
-        <h2>Features</h2>
-        <ul>
-          <li>Create and manage academic posts</li>
-          <li>Join classrooms via email OTPs</li>
-          <li>Share and interact with notes</li>
-          <li>Real-time notifications</li>
-          <li>Secure and reliable platform</li>
-        </ul>
-      </section>
-    </div>
+      <section className="landing-copyright">
+  <h2>Copyright Reserved</h2>
+  <p>&copy; 2025 NotedAF. All rights reserved.</p>
+  <ul>
+    <li>Contact us: 24mcaa07@kristujayanti.com | 24mcaa60@kristujayanti.com</li>
+
+    <li>Support: 7899419722</li>
+  </ul>
+</section>
+</div>
   );
 };
 
