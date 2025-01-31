@@ -61,10 +61,10 @@ const LandingPage = () => {
           </div>
         </div>
 
-        
+
       </header>
 
-
+<h1 className='learn'>Learn directly from the best Teachers</h1>
       {/* Image Slider */}
       <Slider {...sliderSettings} className="image-slider">
         <div>
