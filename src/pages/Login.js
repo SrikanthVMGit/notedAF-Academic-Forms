@@ -57,6 +57,7 @@ const Login = () => {
 
   return (
     <div className="login-page">
+
       <div className="login-container">
         <h2>Noted Academic Forms</h2>
         <p>Please enter your details to continue.</p>
@@ -105,6 +106,18 @@ const Login = () => {
           </p>
         </div>
       </div>
+
+          <div className='login-right'>
+          <h1>Enhance your learning<br />  with AI-driven<br />  Noted AF.</h1>
+
+          <div className='login-bottom'>
+          <p>Discover the ultimate AI-powered platform for creating and managing academic forms. <br />
+          Explore our versatile solutions and services designed to enhance your academic experience.</p>
+          </div>
+
+          </div>
+          
+
     </div>
   );
 };

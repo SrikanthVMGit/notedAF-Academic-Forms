@@ -105,16 +105,16 @@ const Signup = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
-<div className="send-otp-btn-container">
+                        <div className="send-otp-btn-container">
 
-                        <button
-                            type="button"
-                            onClick={handleSendOtp}
-                            className="send-otp-btn"
-                            disabled={otpLoading}
-                        >
-                            {otpLoading ? 'Sending...' : 'Send OTP'}
-                        </button>
+                            <button
+                                type="button"
+                                onClick={handleSendOtp}
+                                className="send-otp-btn"
+                                disabled={otpLoading}
+                            >
+                                {otpLoading ? 'Sending...' : 'Send OTP'}
+                            </button>
                         </div>
                         <div className="input-group">
 
@@ -158,6 +158,20 @@ const Signup = () => {
                     </p>
                 </div>
             </div>
+
+            <div className='login-right'>
+          <h1>Enhance your learning<br />  with AI-driven<br />  Noted AF.</h1>
+
+          <div className='login-bottom'>
+          <p>Discover the ultimate AI-powered platform for creating and managing academic forms. <br />
+          Explore our versatile solutions and services designed to enhance your academic experience.</p>
+          </div>
+
+          </div>
+          
+
+
+
         </div>
     );
 };

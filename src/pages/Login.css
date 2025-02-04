@@ -4,7 +4,7 @@
 /* Login Page Layout */
 .login-page {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   background-color: #023e8a;
@@ -13,6 +13,7 @@
 
 /* Login Container */
 .login-container {
+  margin-left: 150px;
   background-color: #caf0f8;
   padding: 40px 50px;
   border-radius: 10px;
@@ -20,6 +21,11 @@
   width: 100%;
   max-width: 400px;
   text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.login-container:hover {
+  transform: translateX(20px);
 }
 
 /* Headings */
@@ -35,6 +41,37 @@
   margin-bottom: 30px;
 }
 
+.login-right {
+  margin-left: 50px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.login-right:hover {
+  transform: translateX(20px);
+}
+
+.login-right h1 {
+  font-family: "DM Serif Display", sans-serif;
+  font-size: 72px;
+  color: #F1D302;
+  line-height: 100px;
+  margin-bottom: 20px;
+}
+
+.login-bottom {
+  margin-top: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.login-bottom:hover {
+  transform: translateX(20px);
+}
+
+.login-bottom p {
+  font-size: 17px;
+  color: white;
+  line-height: 1.6;
+}
 /* Input Group */
 .input-group {
   margin-bottom: 20px;
