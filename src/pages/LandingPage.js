@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './LandingPage.css';
-import image1 from '../assets/images/1.png';
-import image2 from '../assets/images/2.png';
-import image3 from '../assets/images/3.png';
+
 import Navbar from '../components/Navbar'; // Import the existing NavBar component
 
 const LandingPage = () => {
@@ -64,20 +61,7 @@ const LandingPage = () => {
 
       </header>
 
-<h1 className='learn'>Learn directly from the best Teachers</h1>
-      {/* Image Slider */}
-      <Slider {...sliderSettings} className="image-slider">
-        <div>
-          <img src={image1} alt="Slide 1" />
-        </div>
-        <div>
-          <img src={image2} alt="Slide 2" />
-        </div>
-        <div>
-          <img src={image3} alt="Slide 3" />
-        </div>
-        {/* Add more slides as needed */}
-      </Slider>
+
       <section className="useralready">
         <h2>About Noted AF</h2>
         <p>Noted AF is an academic platform built using the MERN stack <br/> (MongoDB, Express.js, React, Node.js) to allow teachers and students to create, view, and manage academic posts.  <br/>It includes the functionality for students to join classrooms through email OTPs sent by teachers. <br/> The platform enables interaction and sharing of notes in the form of posts.</p>

@@ -7,36 +7,35 @@
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  background-color: #023e8a;
+  background-color: #1098F7;
   padding: 20px;
+  overflow: hidden; /* Prevents scrollbar from appearing */
+
 }
 
 /* Login Container */
 .login-container {
   margin-left: 150px;
-  background-color: #caf0f8;
-  padding: 40px 50px;
+  background-color: #011627;
+  padding: 150px 50px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
   text-align: center;
-  transition: transform 0.5s ease-in-out;
+
 }
 
-.login-container:hover {
-  transform: translateX(20px);
-}
 
 /* Headings */
 .login-container h2 {
   font-size: 2rem;
-  color: #03045e;
+  color: #1098F7;
   margin-bottom: 10px;
 }
 
 .login-container p {
-  color: #0077b6;
+  color: #1098F7;
   font-size: 0.9rem;
   margin-bottom: 30px;
 }
@@ -53,7 +52,7 @@
 .login-right h1 {
   font-family: "DM Serif Display", sans-serif;
   font-size: 72px;
-  color: #F1D302;
+  color: #011627;
   line-height: 100px;
   margin-bottom: 20px;
 }
@@ -69,8 +68,9 @@
 
 .login-bottom p {
   font-size: 17px;
-  color: white;
+  color: #011627;
   line-height: 1.6;
+  opacity: 80%;
 }
 /* Input Group */
 .input-group {
@@ -80,7 +80,7 @@
 
 .input-group label {
   font-size: 0.9rem;
-  color: #050060;
+  color: #1098F7;
   display: block;
   margin-bottom: 5px;
 }
@@ -103,7 +103,7 @@
 .login-btn {
   width: 100%;
   padding: 12px 0;
-  background-color: #003f88;
+  background-color: #1098F7;
   color: white;
   border: none;
   border-radius: 6px;
@@ -113,7 +113,7 @@
 }
 
 .login-btn:hover {
-  background-color: #388E3C;
+  background-color: #05639E;
 }
 
 /* Spinner Icon */

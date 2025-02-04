@@ -84,7 +84,8 @@ const Signup = () => {
     return (
         <div className="signup-page">
             <div className="signup-container">
-                <h2>Noted Academic Forms</h2>
+                <h2>Noted AF</h2>
+                <p>Please enter your details to continue.</p>
 
                 <form onSubmit={handleSubmit} className='signup-form'>
                     <div className="input-group">
@@ -160,8 +161,7 @@ const Signup = () => {
             </div>
 
             <div className='login-right'>
-          <h1>Enhance your learning<br />  with AI-driven<br />  Noted AF.</h1>
-
+            <h1>Elevate your education<br />  with AI-enhanced<br />  Noted AF.</h1>
           <div className='login-bottom'>
           <p>Discover the ultimate AI-powered platform for creating and managing academic forms. <br />
           Explore our versatile solutions and services designed to enhance your academic experience.</p>

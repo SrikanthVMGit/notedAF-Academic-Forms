@@ -57,7 +57,7 @@ const Login = () => {
 
   return (
     <div className="login-page">
-
+      
       <div className="login-container">
         <h2>Noted Academic Forms</h2>
         <p>Please enter your details to continue.</p>

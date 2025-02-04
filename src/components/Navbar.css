@@ -5,7 +5,7 @@
     align-items: center;
     padding: 15px 40px;
     background-color: #FDFFFC;
-    border-bottom: 5px solid #0D3B66;
+    border-bottom: 5px solid #1098F7;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -64,7 +64,7 @@
 /* Login Button, Logout Button, and Profile Button */
 .login-btn, .logout-btn, .profile-btn {
     font-size: 16px !important;
-    background-color: #05639E;
+    background-color: #1098F7;
     color: white;
     border: none;
     padding: 10px 20px !important;
