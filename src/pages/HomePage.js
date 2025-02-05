@@ -48,38 +48,27 @@ const Homepage = () => {
 
             {/* Hero Section */}
             <section className="hero-section">
-                <h1>Welcome to Noted AF <br></br>(academic forms)</h1>
+                <h1>Welcome to Noted AF <br></br>(academic forms)<br/></h1>
+                <h2>
+                <br/>"The journey of a thousand miles<br/> begins with a single step."</h2>
                 <p>
                     {user
                         ? `Hello, ${user.name}! Ready to explore your classrooms?`
                         : 'Join or create classrooms to enhance your learning experience!'}
                 </p>
+                
                 <button
                     className="explore-btn"
                     onClick={() => navigate(user ? '/profile' : '/signup')}
                 >
-                    {user ? (user.role === 'teacher' ? 'Your Classes' : 'Learning Dashboard') : 'Get Started'}
+                    {user ? (user.role === 'teacher' ? 'Go to Your Classes' : 'Go to Learning Dashboard') : 'Get Started'}
                 </button>
             </section>
 
-            {/* Image Slider */}
-            <Slider {...sliderSettings} className="image-slider">
-            <div>
-          <img src={image1} alt="Slide 1" />
-        </div>
-        <div>
-          <img src={image2} alt="Slide 2" />
-        </div>
-        <div>
-          <img src={image3} alt="Slide 3" />
-        </div>
-                {/* Add more slides as needed */}
-            </Slider>
-
-            
             {/* Features Section */}
             <section className="features-section">
-                <h2>Experience the best features of the Forms</h2>
+                <h2>Experience the best features of<br/> Noted AF<p>Noted AF is designed to streamline your academic workflow.<br/> Discover powerful tools and features to enhance your learning experience.</p></h2>
+              
                 <div className="features-grid">
                     <div className="feature-card">
                         <img src="https://img.icons8.com/ios/100/000000/teacher.png" alt="Create Classrooms" />
@@ -93,8 +82,8 @@ const Homepage = () => {
                     </div>
                     <div className="feature-card">
                         <img src="https://img.icons8.com/ios/100/000000/online-support.png" alt="Interactive Learning" />
-                        <h3>Interactive Learning</h3>
-                        <p>Collaborate and interact with peers and teachers in real-time.</p>
+                        <h3>AI Integrated</h3>
+                        <p>Use AI to Summarize your notes and make learning simple.</p>
                     </div>
                 </div>
             </section>
