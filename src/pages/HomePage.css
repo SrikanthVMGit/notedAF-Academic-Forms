@@ -125,12 +125,23 @@ opacity: 60%;
 
 /* Call to Action Section */
 .cta-section {
+    display:flex;
+    justify-content: flex-start;
     background-color: #fff;
-    padding: 40px 20px;
+    padding: 40px 20px; 
     margin-top: 40px;
     border-radius: 10px;
+    width: 100%;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.cta-section h2{
+    font-size: 56px;
+    margin-left: 60px;
+
+}
+
 
 .cta-btn {
     background-color: #050060;
@@ -142,7 +153,9 @@ opacity: 60%;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+margin-left: 60px;
 }
+
 
 .cta-btn:hover {
     background-color: #388E3C;
@@ -158,6 +171,13 @@ opacity: 60%;
     height: auto;
     border-radius: 10px;
 }
+
+.footer{
+    background:#fff ;
+    color: #A31621;
+     display: flex;
+ }
+    
 
 /* Responsive Design */
 @media (max-width: 768px) {

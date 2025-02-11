@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Slider from 'react-slick';
 import './HomePage.css';
-import image1 from '../assets/images/1.png';
-import image2 from '../assets/images/2.png';
-import image3 from '../assets/images/3.png';
 
 
 const Homepage = () => {
@@ -31,17 +27,7 @@ const Homepage = () => {
         fetchUser();
     }, []);
 
-    const sliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: true,
-    };
-
+    
     return (
         <div className="homepage">
             
@@ -88,11 +74,12 @@ const Homepage = () => {
                 </div>
             </section>
 
+
+
             {/* Role-based CTA */}
             {user && user.role === 'teacher' && (
                 <section className="cta-section">
                     <h2>Start Teaching Today</h2>
-                    <p>Create your first classroom and start sharing knowledge!</p>
                     <button onClick={() => navigate('/profile')} className="cta-btn">Create Classroom</button>
                 </section>
             )}
@@ -100,7 +87,6 @@ const Homepage = () => {
             {user && user.role === 'student' && (
                 <section className="cta-section">
                     <h2>Explore New Classrooms</h2>
-                    <p>Join classes and enhance your learning experience.</p>
                     <button onClick={() => navigate('/profile')} className="cta-btn">Join Classroom</button>
                 </section>
             )}
