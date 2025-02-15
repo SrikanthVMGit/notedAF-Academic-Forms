@@ -224,6 +224,10 @@ const ProfilePage = () => {
                             </table>
                         </div>
                     )}
+
+                    <button onClick={() => navigate('/quiz')} className="take-quiz-btn">
+                        Take a Quiz
+                    </button>
                 </>
             ) : (
                 <p>No user data found.</p>

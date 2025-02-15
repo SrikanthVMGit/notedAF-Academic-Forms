@@ -23,7 +23,7 @@
     width: 120px;
     height: 120px;
     object-fit: cover;
-    border: 3px solid #4CAF50;
+    border: 3px solid #011627;
     margin-right: 25px;
 }
 
@@ -45,7 +45,7 @@
 
 /* Button Styling */
 .create-classroom-btn {
-    background-color: #4CAF50;
+    background-color: #011627;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -57,13 +57,13 @@
 }
 
 .create-classroom-btn:hover {
-    background-color: #388E3C;
+    background-color: #011627;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .create-classroom-btn:focus {
-    outline: 2px solid #388E3C;
+    outline: 2px solid #011627;
 }
 
 /* Popup Styling */
@@ -109,7 +109,7 @@
 
 .popup-content input:focus,
 .popup-content textarea:focus {
-    border-color: #4CAF50;
+    border-color: #011627;
 }
 
 /* Popup Buttons */
@@ -121,7 +121,7 @@
 }
 
 .popup-buttons button {
-    background-color: #4CAF50;
+    background-color: #011627;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -133,13 +133,13 @@
 }
 
 .popup-buttons button:hover {
-    background-color: #388E3C;
+    background-color: #011627;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .popup-buttons button:focus {
-    outline: 2px solid #388E3C;
+    outline: 2px solid #011627;
 }
 
 .popup-buttons button:last-child {
@@ -177,7 +177,7 @@
 }
 
 .classroom-list th {
-    background-color: #4CAF50;
+    background-color: #011627;
     color: white;
     font-weight: bold;
     text-transform: uppercase;

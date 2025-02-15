@@ -36,13 +36,17 @@ app.use(cookieParser({
     signed: true
 }));
 
+
 // Import routes
 const authRoutes = require('./routes/authRoutes');
 const classroomRoutes = require('./routes/classroomRoutes');
+const quizRoutes = require('./routes/quizRoutes');
+
 
 // Use routes
 app.use('/auth', authRoutes);
 app.use('/class', classroomRoutes);
+app.use('/quiz', quizRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
