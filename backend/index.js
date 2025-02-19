@@ -58,5 +58,5 @@ app.get('/getuserdata', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Mastersgang backend app listening on port ${port}`);
+    console.log(`Noted AF backend app listening on port ${port}`);
 });

@@ -214,6 +214,28 @@
     }
 }
 
+.take-quiz-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #1098F7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.take-quiz-btn:hover {
+    background-color: #05639E;
+    transform: scale(1.05);
+}
+
+.take-quiz-btn:active {
+    transform: scale(0.95);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .profile-info {
