@@ -17,19 +17,26 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!email || !password) {
       toast.error('Email and Password are required!');
       return;
     }
-
+  
     if (!isValidEmail(email)) {
       toast.error('Please enter a valid email address!');
       return;
     }
-
+  
     setLoading(true);
     try {
+      // Check if admin login
+      if (email === "admin@admin.com" && password === "admin") {
+        toast.success("Admin logged in successfully");
+        navigate('/admin-dashboard'); // Redirect to Admin Dashboard
+        return;
+      }
+  
       const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
@@ -38,9 +45,9 @@ const Login = () => {
         body: JSON.stringify({ email, password }),
         credentials: 'include',
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
         toast.success('Logged in successfully');
         login(data.data);
@@ -54,7 +61,6 @@ const Login = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="login-page">
       

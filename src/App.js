@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ProfilePage from './pages/ProfilePage';
 import ClassesDetails from './pages/ClassesDetails';
 import LandingPage from './pages/LandingPage'; // Import the new landing page
+import Admdash from './pages/Admdash';
 
 const ProtectedRoute = ({ children }) => {
   const { auth, login } = useAuth();
@@ -66,6 +67,7 @@ const App = () => {
         <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
         <Route path="/classes/:classid" element={<ProtectedRoute><ClassesDetails /></ProtectedRoute>} />
         <Route path="/quiz" element={<ProtectedRoute><QuizPage /></ProtectedRoute>} /> {/* New Quiz Page Route */}
+        <Route path="/admin-dashboard" element={<Admdash />} />
 
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar closeOnClick pauseOnHover draggable />
