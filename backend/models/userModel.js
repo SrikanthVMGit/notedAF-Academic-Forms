@@ -14,6 +14,28 @@ const userSchema = new mongoose.Schema({
         type: String, 
         enum: ['teacher', 'student'], // Role can only be 'teacher' or 'student'
         required: true 
+    },
+    bio: { 
+        type: String, 
+        maxlength: 500,
+        default: ''
+    },
+    phone: { 
+        type: String,
+        default: ''
+    },
+    location: { 
+        type: String,
+        default: ''
+    },
+    avatar: { 
+        type: String,
+        default: '/default-avatar.png'
+    },
+    status: {
+        type: String,
+        enum: ['online', 'offline', 'away'],
+        default: 'online'
     }
 }, { timestamps: true });
 

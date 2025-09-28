@@ -3,6 +3,7 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config();
 
 const port = process.env.PORT || 5000;  // Ensure default port in case .env is missing
@@ -27,26 +28,24 @@ app.use(
 // Use express built-in json parser instead of body-parser
 app.use(express.json());
 
-// Update cookie settings for local dev (use secure: true only in production)
-app.use(cookieParser({
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',  // Use secure cookies in production
-    sameSite: 'none',
-    maxAge: 1000 * 60 * 60 * 24 * 7,
-    signed: true
-}));
+// Use cookie parser middleware
+app.use(cookieParser());
 
+// Serve uploaded files statically
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');
 const classroomRoutes = require('./routes/classroomRoutes');
 const quizRoutes = require('./routes/quizRoutes');
+const profileRoutes = require('./routes/profileRoutes');
 
 
 // Use routes
 app.use('/auth', authRoutes);
 app.use('/class', classroomRoutes);
 app.use('/quiz', quizRoutes);
+app.use('/profile', profileRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');

@@ -30,13 +30,6 @@ const Login = () => {
   
     setLoading(true);
     try {
-      // Check if admin login
-      if (email === "admin@admin.com" && password === "admin") {
-        toast.success("Admin logged in successfully");
-        navigate('/admin-dashboard'); // Redirect to Admin Dashboard
-        return;
-      }
-  
       const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
@@ -51,7 +44,7 @@ const Login = () => {
       if (response.ok) {
         toast.success('Logged in successfully');
         login(data.data);
-        navigate('/home'); // Redirect to homepage after login
+        navigate('/'); // Redirect to homepage after login
       } else {
         toast.error(data.message || 'Invalid email or password');
       }

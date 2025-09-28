@@ -1,0 +1,132 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary-700);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.input-label.required::after {
+  content: '*';
+  color: var(--error-500);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid var(--secondary-200);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.input-wrapper:hover:not(.disabled) {
+  border-color: var(--secondary-300);
+  box-shadow: var(--shadow-md);
+}
+
+.input-wrapper.focused {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px var(--primary-100);
+}
+
+.input-wrapper.error {
+  border-color: var(--error-500);
+  box-shadow: 0 0 0 3px var(--error-100);
+}
+
+.input-wrapper.disabled {
+  background-color: var(--secondary-50);
+  border-color: var(--secondary-200);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.input-field {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--secondary-700);
+  outline: none;
+  border-radius: var(--radius-lg);
+}
+
+.input-field.has-icon {
+  padding-left: var(--space-12);
+}
+
+.input-field::placeholder {
+  color: var(--secondary-400);
+}
+
+.input-field:disabled {
+  cursor: not-allowed;
+}
+
+.input-icon {
+  position: absolute;
+  left: var(--space-4);
+  display: flex;
+  align-items: center;
+  color: var(--secondary-400);
+  pointer-events: none;
+}
+
+.input-wrapper.focused .input-icon {
+  color: var(--primary-500);
+}
+
+.input-wrapper.error .input-icon {
+  color: var(--error-500);
+}
+
+.input-error {
+  font-size: 0.875rem;
+  color: var(--error-500);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.input-helper {
+  font-size: 0.875rem;
+  color: var(--secondary-500);
+}
+
+/* Special input types */
+.input-field[type="password"] {
+  font-family: monospace;
+}
+
+.input-field[type="number"] {
+  appearance: textfield;
+}
+
+.input-field[type="number"]::-webkit-outer-spin-button,
+.input-field[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .input-field {
+    padding: var(--space-3);
+  }
+  
+  .input-field.has-icon {
+    padding-left: var(--space-10);
+  }
+}

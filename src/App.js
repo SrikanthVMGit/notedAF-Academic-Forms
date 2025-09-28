@@ -20,32 +20,41 @@ const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const checkLoginStatus = async () => {
-      try {
-        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/auth/checklogin`, {
-          method: 'GET',
-          credentials: 'include',
-        });
-        const data = await response.json();
+    // Only check if user is not already authenticated
+    if (!auth.user) {
+      const checkLoginStatus = async () => {
+        try {
+          const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/auth/checklogin`, {
+            method: 'GET',
+            credentials: 'include',
+          });
+          const data = await response.json();
 
-        if (response.ok && data.ok) {
-          login({ userId: data.userId });
-        } else {
-          toast.error(data.message || 'Session expired. Please log in again.');
+          if (response.ok && data.ok) {
+            login({ userId: data.userId });
+          } else {
+            navigate('/login');
+          }
+        } catch (error) {
+          console.error('Auth check failed:', error);
           navigate('/login');
+        } finally {
+          setLoading(false);
         }
-      } catch (error) {
-        toast.error('Error checking login status.');
-        navigate('/login');
-      } finally {
-        setLoading(false);
-      }
-    };
-    checkLoginStatus();
-  }, [navigate, login]);
+      };
+      checkLoginStatus();
+    } else {
+      setLoading(false);
+    }
+  }, [auth.user, navigate, login]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading-spinner">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   return auth.user ? children : <Navigate to="/login" />;

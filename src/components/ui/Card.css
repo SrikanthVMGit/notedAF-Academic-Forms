@@ -1,0 +1,70 @@
+.card {
+  background-color: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--secondary-100);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-md);
+}
+
+.card-bordered {
+  border: 2px solid var(--secondary-200);
+}
+
+.card-header {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--secondary-100);
+  background-color: var(--secondary-50);
+}
+
+.card-body {
+  padding: var(--space-6);
+}
+
+.card-footer {
+  padding: var(--space-6);
+  border-top: 1px solid var(--secondary-100);
+  background-color: var(--secondary-50);
+}
+
+/* Card variants */
+.card-success {
+  border-left: 4px solid var(--success-500);
+}
+
+.card-warning {
+  border-left: 4px solid var(--warning-500);
+}
+
+.card-error {
+  border-left: 4px solid var(--error-500);
+}
+
+.card-primary {
+  border-left: 4px solid var(--primary-500);
+}
+
+/* Compact spacing */
+.card-compact .card-header,
+.card-compact .card-body,
+.card-compact .card-footer {
+  padding: var(--space-4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: var(--space-4);
+  }
+}
