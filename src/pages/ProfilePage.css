@@ -168,7 +168,7 @@
 }
 
 .profile-bio p {
-  color: var(--text-secondary);
+  color: #4b5563;
   line-height: var(--leading-relaxed);
 }
 
@@ -203,7 +203,7 @@
 
 .stat-label {
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: #4b5563;
   font-weight: var(--font-medium);
 }
 
@@ -245,7 +245,7 @@
 
 .classroom-header h4 {
   margin: 0;
-  color: var(--text-primary);
+  color: #111827;
   font-weight: var(--font-semibold);
   font-size: var(--text-lg);
 }
@@ -260,7 +260,7 @@
 }
 
 .classroom-description {
-  color: var(--text-secondary);
+  color: #4b5563;
   margin: 0 0 var(--space-3) 0;
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
@@ -270,18 +270,19 @@
   display: flex;
   gap: var(--space-4);
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: #4b5563;
 }
 
 .empty-state {
   text-align: center;
   padding: var(--space-8);
-  color: var(--text-secondary);
+  color: #4b5563;
 }
 
 .empty-state p {
   margin-bottom: var(--space-4);
   font-size: var(--text-lg);
+  color: #4b5563;
 }
 
 /* Quick Actions */

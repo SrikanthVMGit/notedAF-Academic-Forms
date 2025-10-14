@@ -2,9 +2,10 @@
   background-color: white;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--secondary-100);
+  border: 1px solid #f1f5f9;
   transition: all var(--transition-normal);
   overflow: hidden;
+  color: #111827;
 }
 
 .card-hover:hover {
@@ -22,8 +23,9 @@
 
 .card-header {
   padding: var(--space-6);
-  border-bottom: 1px solid var(--secondary-100);
-  background-color: var(--secondary-50);
+  border-bottom: 1px solid #f1f5f9;
+  background-color: #f8fafc;
+  color: #111827;
 }
 
 .card-body {
@@ -32,8 +34,9 @@
 
 .card-footer {
   padding: var(--space-6);
-  border-top: 1px solid var(--secondary-100);
-  background-color: var(--secondary-50);
+  border-top: 1px solid #f1f5f9;
+  background-color: #f8fafc;
+  color: #111827;
 }
 
 /* Card variants */

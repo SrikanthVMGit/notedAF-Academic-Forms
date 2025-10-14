@@ -208,6 +208,39 @@
   text-decoration: underline;
 }
 
+/* OTP Section Styles */
+.otp-section {
+  margin: var(--space-4) 0;
+}
+
+.otp-input-group {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-end;
+}
+
+.send-otp-btn {
+  background-color: white !important;
+  color: #1f2937 !important;
+  border: 2px solid #3b82f6 !important;
+  font-weight: var(--font-semibold) !important;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.send-otp-btn:hover {
+  background-color: #3b82f6 !important;
+  color: white !important;
+  border-color: #2563eb !important;
+}
+
+.send-otp-btn:disabled {
+  background-color: #f3f4f6 !important;
+  color: #9ca3af !important;
+  border-color: #d1d5db !important;
+  cursor: not-allowed;
+}
+
 @media (max-width: 1024px) {
   .signup-page {
     grid-template-columns: 1fr;

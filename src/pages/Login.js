@@ -44,7 +44,7 @@ const Login = () => {
       if (response.ok) {
         toast.success('Logged in successfully');
         login(data.data);
-        navigate('/'); // Redirect to homepage after login
+        navigate('/home'); // Redirect to homepage after login
       } else {
         toast.error(data.message || 'Invalid email or password');
       }

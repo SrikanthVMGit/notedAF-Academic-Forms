@@ -34,15 +34,16 @@
 
 .btn-secondary {
   background-color: white;
-  color: var(--secondary-700);
-  border: 1px solid var(--secondary-300);
+  color: #1f2937;
+  border: 1px solid #d1d5db;
   box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover:not(.btn-disabled) {
-  background-color: var(--secondary-50);
-  border-color: var(--secondary-400);
+  background-color: #f9fafb;
+  border-color: #9ca3af;
   box-shadow: var(--shadow-md);
+  color: #111827;
 }
 
 .btn-success {
